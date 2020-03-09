@@ -1,0 +1,36 @@
+# laravel
+/public/hot
+/storage/*.key
+/.vagrant
+Homestead.json
+Homestead.yaml
+yarn-error.log
+
+# compiled output
+/dist
+/tmp
+
+# dependencies
+/node_modules
+/bower_components
+/vendor
+
+# IDEs and editors
+/.idea
+
+# misc
+.env
+/.sass-cache
+/connect.lock
+/coverage/*
+/libpeerconnection.log
+npm-debug.log
+testem.log
+/typings
+
+# e2e
+/e2e/*.js
+/e2e/*.map
+
+#System Files
+.DS_Store

@@ -1,0 +1,539 @@
+:root {
+	--site-accent-color: #689f38;
+	--site-primary-color-100: #1976d2;
+	--site-primary-color-200: #1565c0;
+	--site-bg-color-100: #fff;
+	--site-bg-color-200: #FAFAFA;
+	--site-bg-color-300: #f1f1f1;
+	--site-bg-color-400: #d8d7d7;
+	--site-selected-item-bg-color: #e8f0fe;
+	--site-text-color-100: #fff;
+	--site-text-color-200: rgba(0,0,0,.38);
+	--site-text-color-300: rgba(0,0,0,.54);
+	--site-text-color-400: rgba(0,0,0,.87);
+	--hc-text-color: #5e6977;
+	--hc-title-text-color: #43484d;
+	--hc-article-icon-color: rgb(181, 191, 199);
+	--site-border-color-100: #eff1f2;
+	--site-border-color-200: #E0E0E0;
+}
+
+#theme envato-purchases-panel .purchase,
+#theme category .flex-container > topics-panel,
+#theme hc-search-page .content .article-container,
+#theme help-center .content .child-categories .child-category .title,
+#theme .search-results.mat-autocomplete-panel .result,
+#theme article .article-title,
+#theme article .submit-ticket-container,
+#theme article-feedback,
+#theme article-feedback,
+#theme new-ticket,
+#theme new-ticket > .right-column,
+#theme mail-template-preview .email-inbox > .toolbar > .user > .meta > .info > .mat-icon,
+#theme settings .widget.widget-flat,
+#theme create-subscription-panel .paypal-tab > p
+{
+	border-color: var(--site-border-color-100);
+}
+
+#theme envato-reports .chart-container .body,
+#theme envato-reports .details .header,
+#theme envato-reports .details .sales .sale,
+#theme envato-reports .details .no-sales,
+#theme envato-reports .report .header .custom-filters .left, #theme envato-reports .report .header .custom-filters .right,
+#theme envato-reports .report .header .custom-filters select,
+#theme envato-reports .report .header .custom-filters .select-group select:last-of-type,
+#theme envato-reports .report .no-data-available > .text,
+#theme envato-reports .totals,
+#theme envato-reports .totals > .box,
+#theme envato-reports .simple-table .row,
+#theme tickets-report .report .report-panel .header,
+#theme tickets-report .report .report-panel .body .overall-stats,
+#theme tickets-report .report .report-panel .body .overall-stats .box,
+#theme tickets-report .no-data > .text,
+#theme crupdate-trigger .header .back-button,
+#theme crupdate-trigger .triggers-panel > .panel-header,
+#theme crupdate-trigger .triggers-panel > .panel-header .boxed-text,
+#theme triggers > .header,
+#theme triggers .flex-table-panel,
+#theme conversation-header > .title-meta .reply-button,
+#theme conversation-replies .reply,
+#theme conversation-replies .reply:last-of-type,
+#theme conversation-replies .reply reply-attachment-list,
+#theme conversation-replies .message-header .customer .draft-actions > button,
+#theme .show-original-reply-modal-container .headers,
+#theme .show-original-reply-modal-container .headers > .header,
+#theme .show-original-reply-modal-container .email-content > .body-plain,
+#theme conversation-sidebar,
+#theme conversation-sidebar > .user-info,
+#theme conversation-text-editor > attachments-list,
+#theme conversation-toolbar,
+#theme conversation-toolbar .ticket-info > .ticket-status,
+#theme article-host hc-compact-header,
+#theme .category-articles .header .title,
+#theme .category-articles .articles .article,
+#theme hc-compact-header,
+#theme hc-compact-header .page-header .search-bar input,
+#theme help-center .content .category > .category-info > p,
+#theme .search-results.mat-autocomplete-panel .result .meta > .inline,
+#theme articles-list .articles-list-container .mat-paginator,
+#theme articles-list > .action-bar .action,
+#theme categories-manager .categories,
+#theme help-center-manage .panel,
+#theme help-center-manage .panel .panel-header,
+#theme new-article .container > .middle-column .title > .article-status-input,
+#theme .article-body h2, #theme .editor-body h2,
+#theme .article-body table td, #theme .editor-body table td,
+#theme .article-body table th, #theme .editor-body table th,
+#theme customer-footer,
+#theme reply-attachment-list .attachments-list-item,
+#theme tags-manager .existing-tags .tags-list,
+#theme tickets-list .mat-row,
+#theme tickets-list .mat-column-replies-count > span,
+#theme .add-tag-menu .mat-menu-item:first-of-type,
+#theme agent-mailbox-ticket-list .mat-paginator,
+#theme .agent-search-modal-container .search-results,
+#theme .agent-search-modal-container .search-results > .tab-menu,
+#theme .agent-search-modal-container .search-results > .tabs,
+#theme .agent-search-modal-container .search-results > .tabs > .users-tab > .user,
+#theme .agent-search-modal-container .search-results > .tabs .articles-list > .article,
+#theme .canned-reply-menu .input-container,
+#theme mailbox .mailbox-container .left-column,
+#theme new-ticket .input-container input, #theme new-ticket .input-container select,
+#theme new-ticket .input-container > text-editor,
+#theme ticket-floating-toolbar .toolbar-item,
+#theme .agent-mailbox-autocomplete.mat-autocomplete-panel .header > .header-item,
+#theme .agent-mailbox-autocomplete.mat-autocomplete-panel .result,
+#theme user-profile .content .sidebar .panel,
+#theme user-profile .content .sidebar .user-info,
+#theme user-profile .content .tickets,
+#theme user-profile .content .tickets .mat-paginator,
+#theme .attachments .attachment,
+#theme .hc-content .left,
+#theme .panel .panel-footer,
+#theme ads-page .panel,
+#theme ads-page .panel > .header,
+#theme chart .chart-header,
+#theme appearance-panel-meta,
+#theme appearance > .sidebar,
+#theme appearance > .sidebar .back-button,
+#theme appearance > .sidebar .header,
+#theme appearance .nav-item,
+#theme code-editor-modal .editor,
+#theme appearance-image-input .img-container,
+#theme appearance-list-input,
+#theme add-menu-item-panel > .header,
+#theme add-menu-item-panel .new-item-tabs .items-list > .item,
+#theme menus-appearance-panel .mat-expansion-panel,
+#theme menus-appearance-panel .mat-expansion-panel > .mat-expansion-panel-header.mat-expanded,
+#theme crupdate-plan-modal .section-title,
+#theme mail-template-preview .email-inbox > .header,
+#theme mail-template-preview .email-inbox > .toolbar > .actions > .buttons,
+#theme mail-template-preview .email-inbox > .toolbar > .actions > .buttons > .reply,
+#theme mail-templates > .header,
+#theme mail-templates > .header .action,
+#theme mail-templates > .label .type:last-of-type,
+#theme mail-templates > .template.column mail-template-preview,
+#theme mail-templates > .template > .editor,
+#theme mail-templates > .template > mail-template-preview,
+#theme crupdate-page > .slug-container > .back-button,
+#theme permissions-manager-panel .header,
+#theme assign-users-to-role-modal .with-addon > .input-addon,
+#theme roles .new-role,
+#theme translations > aside .new-localization,
+#theme translations > aside .update-translations,
+#theme user-access-manager .panel-outter > .header,
+#theme user-subscription-page .content .main-section,
+#theme user-subscription-page .card-preview,
+#theme accepted-payments-header,
+#theme order-summary,
+#theme order-summary,
+#theme order-summary .emphasis,
+#theme upgrade-page-aside,
+#theme upgrade-page-aside .secure-shopping,
+#theme chip-input .mat-chip-list-wrapper,
+#theme .admin-pill-nav.solid > .nav-item,
+#theme .mat-flat-button.mat-gray,
+#theme .admin-table-panel .admin-table-panel-header > .header-inner.selected,
+#theme .admin-table-panel .admin-table-panel-header > .header-inner.selected > .right > button,
+#theme .input-container input, #theme .input-container select, #theme .input-container textarea, #theme .input-container .fake-input,
+#theme text-editor,
+#theme text-editor .mce-tinymce .mce-panel,
+#theme text-editor .editor-header > .toolbar-row,
+#theme text-editor .editor-header .actions,
+#theme text-editor .editor-footer
+{
+	border-color: var(--site-border-color-200);
+}
+
+#theme .attachments .close
+{
+	color: var(--site-border-color-200);
+}
+
+#theme envato-reports .details .header > .tab-trigger.active,
+#theme conversation-replies .reply.drafts,
+#theme help-center .content .child-categories .show-more-container > button,
+#theme help-center-manage .action-bar > .nav > .nav-item.router-link-active,
+#theme .agent-search-modal-container .search-results > .tab-menu > .tab-menu-item.active,
+#theme .agent-mailbox-autocomplete.mat-autocomplete-panel .header > .header-item.active,
+#theme .admin-pill-nav > .nav-item.selected
+{
+	border-color: var(--site-accent-color);
+}
+
+#theme envato-reports .report .header .easy-filters .actions > .compare-trigger.active,
+#theme tickets-report .report .report-panel .body .overall-stats .box.new-tickets,
+#theme tickets-report .report .report-panel .body .overall-stats .box.solved-tickets,
+#theme conversation-replies .reply.drafts .customer .text-gray,
+#theme breadcrumbs .item.active,
+#theme .category-articles .articles .article:hover,
+#theme hc-search-page .header .back,
+#theme hc-sidenav .active,
+#theme help-center .content .child-categories .child-category .title > .icon,
+#theme help-center .content .child-categories .child-category .articles-list > .article:hover > .text,
+#theme help-center .content .child-categories .child-category .view-more,
+#theme help-center .content .child-categories .show-more-container > button,
+#theme new-ticket > .right-column > .header,
+#theme appearance-panel-meta > .title > .path .last,
+#theme user-subscription-page .content .check-icon,
+#theme plan-features-list .mat-list .check-icon,
+#theme text-editor .editor-header .editor-button.success,
+#theme .mat-button.mat-accent, #theme .mat-icon-button.mat-accent
+{
+	color: var(--site-accent-color);
+}
+
+#theme reports .navigation .nav-item.selected,
+#theme conversation-toolbar .ticket-info > .ticket-status.open,
+#theme hc-sidenav .mobile-toggle,
+#theme help-center .content .child-categories .child-category .title > .article-count,
+#theme help-center-manage .action-bar > .actions > .new-item-button,
+#theme help-center-manage .panel .panel-body .filter-button.active,
+#theme new-article .container > .preview-article-button,
+#theme mailbox .mailbox-container .left-column .aside-container .aside-nav-item.router-link-active .label,
+#theme .admin-pill-nav > .nav-item.selected,
+#theme .mat-raised-button.mat-accent:not([disabled]), #theme .mat-fab.mat-accent, #theme .mat-mini-fab.mat-accent,
+#theme .mat-flat-button.mat-accent:not([disabled]), #theme .mat-fab.mat-accent, #theme .mat-mini-fab.mat-accent,
+#theme .mat-checkbox-checked.mat-accent .mat-checkbox-background, #theme .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background
+{
+	background-color: var(--site-accent-color);
+}
+
+#theme mailbox .mailbox-container .left-column .aside-container .aside-nav-item.router-link-active
+{
+	border-left-color: var(--site-accent-color);
+}
+
+#theme envato-reports .details .sales .sale,
+#theme envato-reports .details .earnings .flex-table .flex-table-row:nth-child(odd),
+#theme envato-reports .details .no-sales,
+#theme envato-reports .report .header .custom-filters .left, #theme envato-reports .report .header .custom-filters .right,
+#theme envato-reports .simple-table .row:nth-child(odd),
+#theme tickets-report .no-data > .text,
+#theme crupdate-trigger .header .back-button,
+#theme conversation-header > .title-meta .reply-button,
+#theme conversation-sidebar,
+#theme conversation-text-editor > attachments-list > .attachments-list-item,
+#theme conversation-toolbar .ticket-info > .ticket-status,
+#theme articles-list,
+#theme categories-list,
+#theme help-center-manage .panel .panel-header,
+#theme new-article,
+#theme customer-footer,
+#theme tickets-list .mat-header-row,
+#theme tickets-list .mat-column-replies-count > span,
+#theme mailbox .mailbox-container .left-column,
+#theme .agent-mailbox-autocomplete.mat-autocomplete-panel .header,
+#theme .agent-mailbox-autocomplete.mat-autocomplete-panel .footer,
+#theme .agent-mailbox-autocomplete.mat-autocomplete-panel .result:hover,
+#theme user-profile,
+#theme .hc-content .left,
+#theme admin > .content .content-inner,
+#theme ads-page .panel > .header,
+#theme appearance > .sidebar,
+#theme add-menu-item-panel,
+#theme menus-appearance-panel .mat-expansion-panel > .mat-expansion-panel-content,
+#theme .select-permissions-modal-container .mat-dialog-container,
+#theme .select-plan-modal-container .mat-dialog-container,
+#theme create-subscription-panel .paypal-tab > p,
+#theme user-subscription-page,
+#theme user-subscription-page .card-preview,
+#theme upgrade-page,
+#theme text-editor .mce-tinymce .mce-panel
+{
+	background-color: var(--site-bg-color-200);
+}
+
+#theme envato-reports .details .sales .sale .order-id,
+#theme envato-reports .report .header .custom-filters datepicker,
+#theme envato-reports .totals > .box > .number,
+#theme envato-reports .totals > .box > .text,
+#theme envato-reports .simple-table .header,
+#theme percentage-change,
+#theme tickets-report .report .report-panel .body .overall-stats .box > .name,
+#theme tickets-report .first-response-chart .overall > .name,
+#theme conversation-header > .title-meta,
+#theme conversation-header > .title-meta .reply-button,
+#theme conversation-replies .message-header .meta,
+#theme conversation-replies .message-header .text-gray,
+#theme conversation-sidebar > .user-info > .user-details,
+#theme conversation-sidebar > .tickets-list-container > .title > .toggle-button,
+#theme conversation-sidebar > .tickets-list-container > .tickets-list > .ticket,
+#theme conversation-sidebar > .tickets-list-container > .tickets-list > .ticket > mat-icon,
+#theme conversation-text-editor .draft-save-notification,
+#theme conversation-text-editor .editor-footer > .right .change-status-button,
+#theme .category-articles .header .description,
+#theme .category-articles .articles .article > .description > .body,
+#theme hc-compact-header .page-header breadcrumbs,
+#theme hc-search-page .header .info,
+#theme hc-search-page .content .article-container .article .body,
+#theme hc-search-page .content .article-container .article .path,
+#theme help-center .content .child-categories .child-category .description,
+#theme .search-results.mat-autocomplete-panel .result .body,
+#theme .search-results.mat-autocomplete-panel .result .meta,
+#theme articles-list .articles-list > .articles-list-item,
+#theme category-list-item > .info,
+#theme help-center-manage .action-bar > .nav > .nav-item,
+#theme customer-footer,
+#theme reply-attachment-list,
+#theme tags-manager .existing-tags > p,
+#theme tickets-list .mat-column-replies-count > span,
+#theme tickets-list .mat-column-ticket-summary .ticket-body,
+#theme tickets-list .mat-column-name,
+#theme .agent-search-modal-container .search-results > .tabs > .users-tab > .user > .text > .body,
+#theme .agent-search-modal-container .search-results > .tabs .articles-list > .article > .article-info > .body,
+#theme mailbox .mailbox-container .left-column .aside-container .aside-container-title,
+#theme .agent-mailbox-autocomplete.mat-autocomplete-panel .body,
+#theme .agent-mailbox-autocomplete.mat-autocomplete-panel .user,
+#theme user-profile .content .sidebar .user-info .avatar-container .hover-overlay > mat-icon,
+#theme user-profile .content .sidebar .user-info > .names > .email,
+#theme .attachments .size,
+#theme analytics-header > .stat > .details > .name,
+#theme chart .chart-header .subtitle,
+#theme menu-items > .inner > .no-menu-items,
+#theme mail-templates > .label .type,
+#theme crupdate-role-modal .setting-container > p,
+#theme settings .settings-panels-container > *:not(router-outlet) > .header,
+#theme upgrade-page-aside .secure-shopping .text > .secondary,
+#theme upgrade-page .payment-step .legal-info,
+#theme .context-menu .context-menu-item:not(:disabled) .mat-icon,
+#theme .context-menu .context-menu-item > .alt-text,
+#theme .menu-with-alt-text .mat-menu-item > .alt-text,
+#theme .admin-table-panel .admin-table-panel-header > .header-inner > .left > .title,
+#theme .admin-table-panel .mat-table .mat-column-edit,
+#theme .input-container p,
+#theme .setting-toggle-container > p,
+#theme text-editor .mat-menu .alt-text
+{
+	color: var(--site-text-color-300);
+}
+
+#theme envato-reports .report .header .easy-filters .actions .action,
+#theme conversation-sidebar > .tickets-list-container > .tickets-list > .ticket:hover,
+#theme conversation-sidebar > .tickets-list-container > .tickets-list > .ticket.open,
+#theme conversation-toolbar > .toolbar-actions .action:hover,
+#theme suggested-articles-dropdown .input-container input,
+#theme .agent-search-modal-container .search-results > .tabs > .users-tab > .user,
+#theme .agent-search-modal-container .search-results > .tabs .articles-list > .article,
+#theme .agent-mailbox-autocomplete.mat-autocomplete-panel .title,
+#theme body, #theme html,
+#theme analytics-header > .stat,
+#theme analytics-header > .stat > .details > .count,
+#theme chart .chart-header .title,
+#theme mail-templates > .label .type.selected,
+#theme default-preview .panel,
+#theme text-preview,
+#theme .admin-pill-nav > .nav-item,
+#theme .context-menu .context-menu-item,
+#theme body,
+#theme .mat-menu-item
+{
+	color: var(--site-text-color-400);
+}
+
+#theme reports .navigation .nav-item.selected,
+#theme conversation-toolbar .ticket-info > .ticket-status.open,
+#theme hc-header .jumbotron,
+#theme help-center .content .child-categories .child-category .title > .article-count,
+#theme help-center-manage .action-bar > .actions > .new-item-button,
+#theme help-center-manage .panel .panel-body .filter-button.active,
+#theme new-article .container > .preview-article-button,
+#theme file-preview-overlay,
+#theme file-preview-toolbar,
+#theme ticket-search-dropdown .input-container input::placeholder,
+#theme select-plan-period-panel .periods > .radio-button-wrapper > .savings-label,
+#theme material-navbar,
+#theme material-navbar .text-logo,
+#theme material-navbar custom-menu .nav-item.router-link-active, #theme material-navbar custom-menu .nav-item.active
+{
+	color: var(--site-text-color-100);
+}
+
+#theme analytics-header > .stat
+{
+	background-color: var(--site-text-color-100);
+}
+
+#theme tickets-report .filters .left, #theme tickets-report .filters .right,
+#theme category,
+#theme help-center,
+#theme suggested-articles-dropdown .input-container input,
+#theme .search-results.mat-autocomplete-panel,
+#theme articles-list-filters,
+#theme articles-list .articles-list > .articles-list-item,
+#theme categories-list .container > .categories-list > category-list-item,
+#theme help-center-manage .action-bar,
+#theme help-center-manage .panel,
+#theme new-article .container > .middle-column,
+#theme new-article .container > .right-column .panel,
+#theme tickets-list .mat-row.open,
+#theme agent-mailbox-ticket-list .mat-paginator,
+#theme .agent-search-modal-container .search-results,
+#theme mailbox .mailbox-container > .right-column,
+#theme ticket-floating-toolbar,
+#theme .agent-mailbox-autocomplete.mat-autocomplete-panel,
+#theme user-profile .content .sidebar .panel,
+#theme user-profile .content .tickets .mat-paginator,
+#theme .hc-content .center,
+#theme connect-social-accounts-panel .social-login-row > .icon-container.facebook .mat-icon,
+#theme chart,
+#theme mail-templates > .header,
+#theme mail-templates > .template > .editor,
+#theme mail-templates > .template > mail-template-preview,
+#theme select-plan-panel .plans > .plan,
+#theme user-subscription-page .content,
+#theme upgrade-page .step-container,
+#theme default-preview .panel,
+#theme text-preview,
+#theme .context-menu,
+#theme .mat-menu-panel
+{
+	background-color: var(--site-bg-color-100);
+}
+
+#theme connect-social-accounts-panel .social-login-row > .icon-container.twitter,
+#theme connect-social-accounts-panel .social-login-row > .icon-container.google
+{
+	color: var(--site-bg-color-100);
+}
+
+#theme select-plan-period-panel .periods > .radio-button-wrapper > .savings-label:before
+{
+	border-left-color: var(--site-bg-color-100);
+}
+
+#theme .default-redirect-menu .selected,
+#theme .ticket-status-menu .mat-menu-item.active,
+#theme customer-tickets-list .mat-row:hover,
+#theme .search-results.mat-autocomplete-panel .result:hover,
+#theme articles-list .articles-list > .articles-list-item:hover,
+#theme categories-list .container > .categories-list > category-list-item:hover,
+#theme tickets-list .mat-row.selected,
+#theme .agent-search-modal-container .search-results > .tabs > .users-tab > .user:hover,
+#theme .agent-search-modal-container .search-results > .tabs .articles-list > .article:hover,
+#theme .assign-ticket-menu.mat-menu-panel .mat-menu-item.active,
+#theme ticket-floating-toolbar .toolbar-item:hover
+{
+	background-color: var(--site-selected-item-bg-color);
+}
+
+#theme .category-articles .articles .article > .description > .title,
+#theme hc-search-page .content .article-container .article .title,
+#theme help-center .content .category > .category-info > p,
+#theme help-center .content .child-categories .child-category .articles-list > .article,
+#theme .search-results.mat-autocomplete-panel .result .title
+{
+	color: var(--hc-text-color);
+}
+
+#theme .category-articles .articles .article > mat-icon,
+#theme help-center .content .child-categories .child-category .articles-list > .article > mat-icon,
+#theme .search-results.mat-autocomplete-panel .result mat-icon,
+#theme topics-panel .category > mat-icon
+{
+	color: var(--hc-article-icon-color);
+}
+
+#theme hc-header .jumbotron,
+#theme material-navbar,
+#theme .mat-raised-button.mat-primary, #theme .mat-icon-button.mat-primary, #theme .mat-progress-bar-fill::after,
+#theme .mat-checkbox-checked.mat-primary .mat-checkbox-background, #theme .mat-checkbox-indeterminate.mat-primary .mat-checkbox-background,
+#theme .mat-radio-button.mat-primary .mat-radio-inner-circle,
+#theme .mat-step-header .mat-step-icon
+{
+	background-color: var(--site-primary-color-200);
+}
+
+#theme suggested-articles-dropdown .dropdown-open .input-icon,
+#theme .la-ball-spin-clockwise
+{
+	color: var(--site-primary-color-200);
+}
+
+#theme admin > .content .left-column > .menu-items > .menu-item.router-link-active
+{
+	border-left-color: var(--site-primary-color-200);
+}
+
+#theme .mat-radio-button.mat-primary.mat-radio-checked .mat-radio-outer-circle,
+#theme .mat-tab-group.mat-primary .mat-ink-bar, #theme .mat-tab-nav-bar.mat-primary .mat-ink-bar
+{
+	border-color: var(--site-primary-color-200);
+}
+
+#theme help-center .content .category > .category-info > h2,
+#theme help-center .content .child-categories .child-category .title > h3 > a,
+#theme topics-panel .category,
+#theme .article-body strong, #theme .editor-body strong,
+#theme .article-body table th, #theme .editor-body table th,
+#theme .article-body .widget > .title, #theme .editor-body .widget > .title,
+#theme article-feedback > .title,
+#theme article-feedback .feedback-submitted-notification,
+#theme new-ticket h1
+{
+	color: var(--hc-title-text-color);
+}
+
+#theme tickets-list,
+#theme .mat-flat-button.mat-gray
+{
+	background-color: var(--site-bg-color-300);
+}
+
+#theme ticket-search-dropdown .input-container input,
+#theme select-plan-period-panel .periods > .radio-button-wrapper > .savings-label,
+#theme material-navbar custom-menu .nav-item.router-link-active, #theme material-navbar custom-menu .nav-item.active,
+#theme .mat-progress-bar-buffer
+{
+	background-color: var(--site-primary-color-100);
+}
+
+#theme analytics-header > .stat > .mat-icon
+{
+	color: var(--site-primary-color-100);
+}
+
+#theme select-plan-period-panel .periods > .radio-button-wrapper > .savings-label:after
+{
+	border-left-color: var(--site-primary-color-100);
+}
+
+#theme .mat-flat-button.mat-gray,
+#theme .context-menu .context-menu-item:disabled,
+#theme .input-container input:disabled, #theme .input-container select:disabled, #theme .input-container textarea:disabled, #theme .input-container .fake-input:disabled
+{
+	color: var(--site-text-color-200);
+}
+
+web-player ::-webkit-scrollbar-thumb, .web-player-theme ::-webkit-scrollbar-thumb
+{
+	background: var(--wp-bg-color-300);
+}
+
+
+web-player ::-webkit-scrollbar-thumb:hover, .web-player-theme ::-webkit-scrollbar-thumb:hover
+{
+	background: var(--wp-bg-color-200);
+}
+
