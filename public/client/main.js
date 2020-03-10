@@ -8582,6 +8582,7 @@ var Users = /** @class */ (function () {
      * Update existing user.
      */
     Users.prototype.update = function (id, payload) {
+        console.log(payload);
         return this.http.put('users/' + id, payload);
     };
     /**

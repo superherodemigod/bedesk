@@ -1,6 +1,9 @@
-<?php namespace Common\Auth;
+<?php
 
-trait FormatsPermissions {
+namespace Common\Auth;
+
+trait FormatsPermissions
+{
 
     /**
      * Encode permissions into json string.
@@ -9,16 +12,16 @@ trait FormatsPermissions {
      */
     public function setPermissionsAttribute($value)
     {
-        if ( ! $value) {
+        if (!$value) {
             $this->attributes['permissions'] = null;
             return;
         }
 
-        if ( ! is_array($value)) {
+        if (!is_array($value)) {
             $value = json_decode($value, true);
         }
 
-        $permissions = array_map(function($permissionValue) {
+        $permissions = array_map(function ($permissionValue) {
             return $permissionValue ? 1 : 0;
         }, $value);
 
@@ -33,14 +36,22 @@ trait FormatsPermissions {
      */
     public function getPermissionsAttribute($value)
     {
-        if ( ! $value) return [];
+        if (!$value) return [];
 
         $permissions = json_decode($value, true) ?: [];
 
-        $permissions = array_map(function($permissionValue) {
+        $permissions = array_map(function ($permissionValue) {
             return $permissionValue ? 1 : 0;
         }, $permissions);
-        
+
         return $permissions;
     }
+    // public function setCategoryPermission($value)
+    // {
+    //     $this->attributes['category_permission'] = json_encode($value);
+    // }
+    // public function setArticlePermission($value)
+    // {
+    //     $this->attributes['article_permission'] = json_encode($value);
+    // }
 }

@@ -92,7 +92,15 @@ class UserController extends Controller {
     {
         $this->authorize('store', User::class);
 
-        $user = $this->userRepository->create($this->request->all());
+        $saveData = array();
+        foreach($this->request->all() as $key => $value)
+        {
+            if($key == 'user_category_permission' || $key == 'user_article_permission')
+                $saveData[$key] = implode(",", $value);
+            else
+                $saveData[$key] = $value;
+        }
+        $user = $this->userRepository->create($saveData);
 
         return $this->success(['user' => $user], 201);
     }
@@ -107,11 +115,21 @@ class UserController extends Controller {
      */
     public function update($id, ModifyUsers $request)
     {
+        // return  $this->request->all();
         $user = $this->userRepository->findOrFail($id);
 
         $this->authorize('update', $user);
 
-        $user = $this->userRepository->update($user, $this->request->all());
+        $saveData = array();
+        foreach($this->request->all() as $key => $value)
+        {
+            if($key == 'user_category_permission' || $key == 'user_article_permission')
+                $saveData[$key] = implode(",", $value);
+            else
+                $saveData[$key] = $value;
+        }
+
+        $user = $this->userRepository->update($user, $saveData);
 
         return $this->success(['user' => $user]);
     }

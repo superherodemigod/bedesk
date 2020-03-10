@@ -1,6 +1,4 @@
-<?php
-
-namespace App\Services\HelpCenter;
+<?php namespace App\Services\HelpCenter;
 
 use DB;
 use App\Article;
@@ -13,8 +11,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Support\Arr;
 
-class ArticleRepository
-{
+class ArticleRepository {
 
     /**
      * @var Article
@@ -76,7 +73,7 @@ class ArticleRepository
             'title'       => $params['title'],
             'body'        => $params['body'],
             'slug'        => isset($params['slug']) ? $params['slug'] : null,
-            'description' => isset($params['description']) ? $params['description'] : null,
+            'description' => isset($params['description']) ? $params['description']: null,
             'draft'       => isset($params['draft']) ? $params['draft'] : 0,
             'extra_data'  => isset($params['extra_data']) ? $params['extra_data'] : null,
         ]);
@@ -104,8 +101,8 @@ class ArticleRepository
         $article->fill([
             'title'       => $params['title'],
             'body'        => $params['body'],
-            'slug'        => isset($params['slug']) ? $params['slug'] : null,
-            'description' => isset($params['description']) ? $params['description'] : null,
+            'slug'        => isset($params['slug']) ? $params['slug']: null,
+            'description' => isset($params['description']) ? $params['description']: null,
             'draft'       => isset($params['draft']) ? $params['draft'] : 0,
             'position'    => isset($params['position']) ? $params['position'] : 0,
             'extra_data'  => isset($params['extra_data']) ? $params['extra_data'] : null,
@@ -135,7 +132,7 @@ class ArticleRepository
 
         //detach tags
         DB::table('taggables')->whereIn('taggable_id', $ids)->where('taggable_type', Article::class)->delete();
-
+        
         //delete articles
         $this->article->whereIn('id', $ids)->delete();
 
@@ -152,7 +149,7 @@ class ArticleRepository
     {
         $paginator = $this->getIndexQuery($params)->paginate(isset($params['per_page']) ? $params['per_page'] : 15);
 
-        $paginator->map(function ($article) {
+        $paginator->map(function($article) {
             $article['body'] = str_limit(strip_tags(html_entity_decode($article['body'])), 200);
             return $article;
         });
@@ -169,7 +166,7 @@ class ArticleRepository
     public function submitFeedback($params)
     {
         //if we are not able to resolve user ip and user is not logged in, bail
-        if (!$params['user_id'] && !$params['ip']) return 0;
+        if ( ! $params['user_id'] && ! $params['ip']) return 0;
 
         $article = $this->article->findOrFail($params['article_id']);
 
@@ -179,11 +176,11 @@ class ArticleRepository
         }
 
         //if we didn't find feedback by user_id and have client IP, search for existing feedback by client IP
-        if (!isset($feedback) && $params['ip']) {
+        if ( ! isset($feedback) && $params['ip']) {
             $feedback = $article->feedback()->where('ip', $params['ip'])->first();
         }
 
-        if (!$feedback) $feedback = $this->feedback->newInstance();
+        if ( ! $feedback) $feedback = $this->feedback->newInstance();
 
         return $feedback->fill($params)->save();
     }
@@ -218,9 +215,9 @@ class ArticleRepository
 
         //filter by search query
         if (isset($params['query'])) {
-            $search = $params['query'] . '%';
+            $search = $params['query'].'%';
             $query->where('title', 'like', $search)
-                ->orWhereHas('tags', function (Builder $builder) use ($search) {
+                ->orWhereHas('tags', function(Builder $builder) use($search) {
                     return $builder->where('name', 'like', $search);
                 });
         }

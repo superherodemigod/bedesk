@@ -55,6 +55,7 @@ class LoginController extends Controller
      */
     protected function authenticated()
     {
+        // redirect(Request::url());
         $data = $this->bootstrapData->get();
         return $this->success(['data' => $data]);
     }

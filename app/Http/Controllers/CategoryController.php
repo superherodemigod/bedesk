@@ -50,25 +50,6 @@ class CategoryController extends Controller
 	{
 		$this->authorize('index', Category::class);
 
-		$permissions =  auth()->user()->permissions;
-		$user_permissions = array();
-		$category_names = array();
-		$article_names = array();
-		foreach ($permissions as $key => $item) {
-			array_push($user_permissions, $key);
-		}
-		for ($i = 0; $i < count($user_permissions); $i++) {
-			$permission = $user_permissions[$i];
-			if (strpos($permission, 'category:') !== false) {
-				$temp = explode(':', $permission);
-				array_push($category_names, $temp[1]);
-			}
-			if (strpos($permission, 'article:') !== false) {
-				$temp = explode(':', $permission);
-				array_push($article_names, $temp[1]);
-			}
-		}
-
 
 		$query = $this->category->rootOnly()
 			->withCount('articles')

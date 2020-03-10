@@ -1,4 +1,6 @@
-<?php namespace Common\Auth\Roles;
+<?php
+
+namespace Common\Auth\Roles;
 
 use App\User;
 use Illuminate\Http\JsonResponse;
@@ -69,14 +71,18 @@ class RolesController extends Controller
             'name'        => 'required|unique:roles|min:2|max:255',
             'default'     => 'boolean',
             'guests'      => 'boolean',
-            'permissions' => 'array'
+            'permissions' => 'array',
+            'category_permission' => 'array',
+            'article_permission' => 'array'
         ]);
 
         $role = $this->role->forceCreate([
             'name'        => $this->request->get('name'),
             'permissions' => $this->request->get('permissions'),
             'default'     => $this->request->get('default', 0),
-            'guests'      => $this->request->get('guests', 0)
+            'guests'      => $this->request->get('guests', 0),
+            'category_permission' => implode(",",$this->request->get('category_permission')),
+            'article_permission' => implode(",",$this->request->get('article_permission')),
         ]);
 
         return $this->success(['data' => $role], 201);
@@ -91,17 +97,27 @@ class RolesController extends Controller
     public function update($id)
     {
         $this->authorize('update', Role::class);
-
         $this->validate($this->request, [
             'name'        => "min:2|max:255|unique:roles,name,$id",
             'default'     => 'boolean',
             'guests'      => 'boolean',
-            'permissions' => 'array'
+            'permissions' => 'array',
+            'category_permission' => 'array',
+            'article_permission' => 'array'
+
         ]);
-
+        // return $this->request->all();
         $role = $this->role->findOrFail($id);
-
-        $role->fill($this->request->all())->save();
+        $saveData = array();
+        foreach($this->request->all() as $key => $value)
+        {
+            if($key == 'category_permission' || $key == 'article_permission')
+                $saveData[$key] = implode(",", $value);
+            else
+                $saveData[$key] = $value;
+        }
+        // return $saveData;
+        $role->fill($saveData)->save();
 
         return $this->success(['data' => $role]);
     }
@@ -151,8 +167,8 @@ class RolesController extends Controller
         }
 
         //filter out users that are already attached to this role
-        $users = $users->filter(function($user) use($roleId) {
-            return ! $user->roles->contains('id', (int) $roleId);
+        $users = $users->filter(function ($user) use ($roleId) {
+            return !$user->roles->contains('id', (int) $roleId);
         });
 
         $role->users()->attach($users->pluck('id')->toArray());

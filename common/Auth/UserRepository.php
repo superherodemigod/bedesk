@@ -217,6 +217,9 @@ class UserRepository {
             'country'     => isset($params['country']) ? $params['country'] : null,
             'timezone'    => isset($params['timezone']) ? $params['timezone'] : null,
             'confirmed'   => isset($params['confirmed']) ? $params['confirmed'] : 1,
+            'user_category_permission'   => isset($params['user_category_permission']) ? $params['user_category_permission'] : null,
+            'user_article_permission'   => isset($params['user_article_permission']) ? $params['user_article_permission'] : 1,
+            'confirmed'   => isset($params['confirmed']) ? $params['confirmed'] : 1,
             'confirmation_code' => isset($params['confirmation_code']) ? $params['confirmation_code'] : null,
         ];
 
@@ -230,6 +233,7 @@ class UserRepository {
                 return (int) $value;
             }, $params['permissions']);
         }
+        
 
         if ($type === 'create') {
             $formatted['email'] = $params['email'];
